@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sorry</title>
+    <link href="/static/css/default.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+    <div id="content" style="width: 1160px; height: 625px; margin-top: 52px; margin-left: 220px;">
+        <div id="code" style="margin-top: 62.5px;">
+
+            <span class="keyword">如果一切都是梦</span>   该有多好 <span class="string">o(╥﹏╥)o</span><br>
+            <span class="comments"> </span><br>
+            那样就还能在梦中遇见你 <br>
+            <span class="keyword">是你让我知道</span>  <br>
+            <span class="placeholder"><span class="keyword">真的有无法挽回的幸福</span> <br>
+				<span class="placeholder"><span class="placeholder">灰暗的过去 <br>
+					<span class="placeholder"> <br>
+				<span class="placeholder">始终无法掩埋<br>
+					<span class="placeholder"><span class="placeholder"><span class="keyword">我知道这世上一定没有</span>  <br>
+				<span class="placeholder">比这更令人难过的事情了</span><br>
+				<span class="placeholder"><span class="string">那时的悲伤<br></span>
+				<span class="placeholder"><span class="string">那时的痛苦<br></span>
+				<br>
+					<span class="keyword">连同深爱着的你</span> <br>
+					<span class="placeholder"><span class="keyword">萦绕在心口 </span> <span
+                            class="keyword">无法消散</span> <br>
+					<span class="placeholder"><span class="placeholder"><span class="keyword">你仍然是我的光</span><br>
+							<span class="placeholder"><span class="placeholder"><span class="keyword">黑暗中追寻着你的身影   </span><span
+                                    class="string">月光下的轮廓仍刻印于心 <br>
+					<span class="placeholder"><span class="placeholder"><span class="keyword">   每当遇到无法承受的苦痛时    </span><span
+                            class="string">总是不禁泪如泉涌</span><br>
+					<span class="placeholder"><span class="placeholder"><span class="keyword">   我比我想象中更爱你 </span><span
+                            class="string">超出了自己的想象 </span> <br>
+					<span class="placeholder"><span class="placeholder"><span class="keyword">   每当想起你   </span><span
+                            class="string">都如同窒息般痛苦</span> <br>
+					<span class="placeholder"><span class="placeholder">   曾经那么亲密<br>
+					<span class="placeholder">如今却如烟云般消散<br>
+				 <br>
+				<span class="keyword">你都经历过什么</span>   又目睹过什么呢 <br>
+				<span class="comments">脸上浮现着我不曾见过的神情<br></span>
+				<span class="placeholder">如果你正在什么地方 与我一样 <span class="keyword">过着痛苦的生活</span> <br>
+				<span class="placeholder"><span class="comments">就请你将我的一切全部遗忘吧<br></span>
+				<span class="placeholder">这是我发自内深处唯一的祈愿<span class="comments"><br><br><br> It's killing me inside</span><br>
+				 <br>
+			</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+        </div>
+        <div id="loveHeart">
+            <canvas id="garden" width="670" height="625"></canvas>
+            <div id="words">
+                <div id="messages">
+                    &nbsp;&nbsp;对不起 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 미안합니다
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zarmoucený &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afligido&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;Bedrøvelig&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beklager
+                    &nbsp;&nbsp;ursäkta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supărat&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เสียใจ&nbsp;&nbsp;&nbsp;&nbsp;
+                    Rumex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;єрєвдмєєр
+                    &nbsp;&nbsp;&nbsp;огорченный&nbsp;&nbsp;
+                    <br> Sorry<br> &nbsp;&nbsp;&nbsp;&nbsp;  üzgün &nbsp;&nbsp;すみません
+                    <br> λυπάμαι &nbsp;&nbsp;    mitenkä &nbsp;&nbsp;  Buartha<br>
+
+
+                </div>
+
+                <div id="loveu">
+                    Goodbye and Goodluck my Dear<br>
+                    <div class="signature"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/garden.js"></script>
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var nolovetime = new Date();
+    nolovetime.setFullYear(2014, 01, 01);
+    nolovetime.setHours(0);
+    nolovetime.setMinutes(0);
+    nolovetime.setSeconds(0);
+    nolovetime.setMilliseconds(0);
+
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 100);
+
+        timeElapse(nolovetime);
+        setInterval(function () {
+            timeElapse(nolovetime);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
+
+
+
+</body>
+</html>
