@@ -12,20 +12,27 @@
 
 <body>
 
+<input id="username" type="text" placeholder="Who is it?"> <a onclick="login()" class="button blue" style="width: 100px">ENTER</a>
 
-<!--<form id="doLogin" name="doLogin" method="post" action="{:url('admin/login/login')}">-->
-    <!--<p class="m-t-md" id="err_msg"></p>-->
-    <!--<input type="text" class="form-control uname" placeholder="用户名" id="username" name="name"/>-->
-    <!--<input type="password" class="form-control pword m-b" placeholder="密码" id="password" name="password"/>-->
-    <!--<div id="slider" class="slider"></div>-->
-    <!--<button type="submit" class="btn btn-primary btn-block">登　录</button>-->
-<!--</form>-->
+</body>
 
-
-<input id="username" type="text" placeholder="你是谁？"> <a onclick="login()" class="button blue" style="width: 100px">ENTER</a>
 <script type="text/javascript" src="/static/js/jquery.js"></script>
 <script type="text/javascript" src="/static/js/textInput.js"></script>
 <script>
+
+    $(document).ready(function() {
+        $.ajax({
+            url: "count",
+            dataType: "json",
+            async: true,
+            type: "GET",
+            success: function (req) {
+            },
+            error: function () {
+            }
+        });
+    });
+
     function login(){
         $.ajax({
             url:"login",
@@ -47,6 +54,4 @@
 
     }
 </script>
-
-</body>
 </html>

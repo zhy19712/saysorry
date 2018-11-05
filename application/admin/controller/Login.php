@@ -45,15 +45,24 @@ class Login extends Controller
             } catch (DbException $e) {
             }
             if (empty($result)) {
-                return json(['code' => 0, 'msg' => "不是"]);
+                return json(['code' => 0, 'msg' => "Not valid"]);
             } else {
                 Session::set("admin",$username); //保存新的
-                return json(['code' => 1, 'msg' => "是", 'data'=>'http://' . $_SERVER['HTTP_HOST'] . '/admin/index/index.html']);
+                return json(['code' => 1, 'msg' => "PASS", 'data'=>'http://' . $_SERVER['HTTP_HOST'] . '/admin/index/index.html']);
             }
         }
         return $this->fetch();
 
 
+    }
+
+    public function count(){
+        $ip = $this->request->ip();
+        $data = [];
+        $data['time'] = date("Y-m-d H:i:s");;
+        $data['ip'] = $ip;
+        Db::name('count')->insert($data);
+        return json(['code' => 1]);
     }
 
 }
